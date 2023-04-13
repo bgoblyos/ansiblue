@@ -2,7 +2,6 @@
   ansible.builtin.hostname:
     name: "{{ host.name }}"
     use: systemd
-  become: true
 
 - name: Flush handlers
   meta: flush_handlers
