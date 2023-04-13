@@ -1,6 +1,7 @@
 - name: kinoite-test
   tasks: 
     - playbooks/host/tasks_host_default.yaml
+    - playbooks/host/tasks_host_plymouth.yaml
     - playbooks/host/tasks_host_rpm_ostree.yaml
     - playbooks/host/tasks_host_systemd.yaml
 
@@ -8,6 +9,7 @@
     - { name: exa, state: present }
     - { name: bat, state: present }
     - { name: fish, state: present }
+    - { name: distrobox, state: present }
 
   systemd:
     - name: downloads-delete.service

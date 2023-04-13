@@ -8,3 +8,5 @@
     loop_var: rpm_ostree_pkg
     label: {'name': '{{ rpm_ostree_pkg.name }}', 'state': '{{ rpm_ostree_pkg.state }}'}
   register: rpm_ostree_pkg_install
+
+

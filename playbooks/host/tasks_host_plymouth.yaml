@@ -1,0 +1,18 @@
+- name: Copy hexagon-red RPM
+  tags: [plymouth]
+  ansible.builtin.template:
+    src: "pkgs/hexagon-red-0.0.1-2.noarch.rpm"
+    dest: "/tpm/hexagon-red-0.0.1-2.noarch.rpm"
+
+- name: Enable initramfs regeneration
+  tags: [plymouth]
+  ansible.builtin.shell:
+    cmd: "rpm-ostree initramfs --enable"
+
+- name: Install hexagon-red RPM
+  tags: [plymouth]
+  community.general.rpm_ostree_pkg:
+    name: "/tmp/hexagon-red-0.0.1-2.noarch.rpm"
+    state: "present"
+
+
