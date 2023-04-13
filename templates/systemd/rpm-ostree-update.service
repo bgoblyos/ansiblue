@@ -1,0 +1,10 @@
+[Unit]
+Description=Update rpm-ostree system image
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rpm-ostree update
+Nice=10
+
+[Install]
+WantedBy=default.target

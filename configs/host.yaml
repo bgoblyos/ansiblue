@@ -16,3 +16,15 @@
     - name: downloads-delete.timer
       enabled: yes
       state: started
+    - name: flatpak-update.service
+      enabled: no
+      state: stopped
+    - name: flatpak-update.timer
+      enabled: yes
+      state: stopped
+    - name: rpm-ostree-update.service
+      enabled: no
+      state: stopped
+    - name: rpm-ostree-update.timer
+      enabled: yes
+      state: stopped

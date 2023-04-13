@@ -24,6 +24,7 @@
         flatpakrepo_url: "{{ item.flatpakrepo_url }}"
       loop: "{{ config.flatpak.remotes }}"
       tags: [flatpak]
+      become: true
 
     - name: Setup flatpaks
       include_tasks: playbooks/setup/setup_flatpak.yaml
